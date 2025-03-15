@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pain of Typing Chinese</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+        }
+        canvas {
+            border: 2px solid #333;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+        .modal h2 {
+            margin-top: 0;
+            color: #ffff00;
+        }
+        .modal p {
+            margin: 10px 0;
+        }
+        .modal button {
+            background: #ffff00;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .modal button:hover {
+            background: #cccc00;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="960" height="540"></canvas>
+    <div id="endModal" class="modal">
+        <h2>Congratulations!</h2>
+        <p>This is a small simulation of Chinese input experience, hope you get the feeling</p>
+        <p>Now you have experienced the pain of typing Chinese!</p>
+        <button onclick="window.location.reload()">Try Again</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
